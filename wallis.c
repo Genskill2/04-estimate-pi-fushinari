@@ -5,6 +5,16 @@
 
 float wallis_pi(int);
 
+float wallis_pi(int count) {
+  float pi = 1.0;
+  for (int i = 1; i < count; i++)
+  {
+    float num = 4.0 * i * i;
+    pi *= num / (num - 1);
+  }
+  return pi * 2;
+}
+
 int main(void) {
   float pi;
   for (int i=0; i<5; i++) {
